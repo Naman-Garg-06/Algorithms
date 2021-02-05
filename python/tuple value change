@@ -1,0 +1,11 @@
+tup = [('a', '10', 0xA), ('b', '9', 0x9)]
+for i in tup:
+    val = list(i)								# first convert the value of tuple in list which u have to change
+    val[-1] = 0x99								# replace the value with changed value 
+    tup.remove(tup[i])							# remove the particular value from tuple
+    tup.append(tuple(val))						# append the new value to existing tuple
+
+print(tup)
+
+
+tup = [('a', '10', 0xA), ('b', '9', 0x99)]      #   OUTPUT
